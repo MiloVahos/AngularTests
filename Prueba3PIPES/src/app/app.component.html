@@ -1,0 +1,81 @@
+<div class="container">
+  <br>
+  <h1>PIPES</h1>
+  <hr>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">VARIABLE</th>
+          <th scope="col">PIPE</th>
+          <th scope="col">PRODUCTO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> {{ nombre }} </td>
+          <td> uppercase </td>
+          <td> {{ nombre | uppercase }} </td>
+        </tr>
+        <tr>
+          <td> {{ nombre }} </td>
+          <td> lowercase </td>
+          <td> {{ nombre | lowercase }} </td>
+        </tr>
+        <tr>
+          <td> {{ nombre }} </td>
+          <td> slice </td>
+          <td> {{ nombre | slice:3 }} </td>
+        </tr>
+        <tr>
+          <td> {{ nombre }} </td>
+          <td> slice arreglo </td>
+          <td> {{ arreglo | slice:1:5 }} </td>
+        </tr>
+        <tr>
+          <td> {{ PI }} </td>
+          <td> number </td>
+          <td> {{ PI | number:'1.0-2' }} </td>
+        </tr>
+        <tr>
+          <td> {{ a }} </td>
+          <td> percent </td>
+          <td> {{ a | percent:'2.2-2' }} </td>
+        </tr>
+        <tr>
+          <td> {{ salario }} </td>
+          <td> currency </td>
+          <td> {{ salario | currency:'EUR':true:'4.0-0' }} </td>
+        </tr>
+        <tr>
+          <td> {{ valorDePromesa }} </td>
+          <td> async </td>
+          <td> {{ valorDePromesa | async }} </td>
+        </tr>
+        <tr>
+          <td> {{ fecha }} </td>
+          <td> date </td>
+          <td> {{ fecha | date:'MMMM - dd' }} </td>
+        </tr>
+        <tr>
+          <td> {{ nombre2 }} </td>
+          <td> capitalizado </td>
+          <td> {{ nombre2 | capitalizado  }} </td>
+        </tr>
+      </tbody>
+    </table>
+
+  <h4>SLICE</h4>
+  <ul>
+    <li *ngFor="let item of arreglo | slice:5:20">{{ item }}</li>
+  </ul>
+
+  <h4>JSON</h4>
+  <pre>{{ heroe | json }}</pre>
+
+  
+  <br><br><br>
+  <br><br><br>
+  <br><br><br>
+</div>
+
+
